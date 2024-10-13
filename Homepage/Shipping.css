@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+}
+
+section {
+    width: 100%;
+    background-color: #fff; /* Customize background as needed */
+    padding: 30px 0;
+    
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
+.logo img {
+    max-width: 237px;
+    height: 32px;
+}
+
+.nav-link {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    /* border: 1px solid; */
+    padding-left: -600px;
+    
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+
+/* .nav-link a:hover
+.nav-link a:focus
+.nav-link a:active {
+    border-bottom: 2px solid grey;
+} */
+
+/* Icons Section */
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon div {
+    display: flex;
+    align-items: center;
+}
+
+.currency h3 {
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+    display: none;
+}
+
+.hamburger img {
+    width: 25px;
+    height: 25px;
+}
+.bag{
+    display: none;
+    margin-left: auto;
+}
+/* dropdown starts */
+
+/* General dropdown styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px;
+    z-index: 1;
+}
+
+/* Dropdown container styling */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.header {
+    font-size: 1.5em;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #ddd;
+}
+
+.dropdown-section {
+    display: none;
+    padding: 12px;
+}
+
+/* Display the active dropdown section */
+.active {
+    display: block;
+}
+
+/* Dropdown visible */
+.show {
+    display: block;
+}
+
+/* search icon */
+.search-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.search-container {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-container.active {
+    display: block; /* Show the search bar */
+    width: 100%; /* Cover the logo and navlinks */
+}
+
+.search-bar::placeholder {
+    color: #bbb;
+}
+
+.search-bar:focus {
+    border-color: #aaa;
+}
+
+/* currency */
+.currency {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.flag {
+    margin-right: 5px;
+}
+
+.arrow-down {
+    margin-left: 5px;
+}
+
+/* .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 100%;
+    z-index: 1;
+} */
+
+.dropdown-item {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* To show the dropdown when the parent is active */
+.currency-container.active .dropdown {
+    display: block;
+}
+
+
+  
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    main {
+        justify-content: space-between;
+    }
+
+    /* Hide navigation links on smaller screens */
+    .nav-link {
+        display: none;
+    }
+
+    /* Show the hamburger menu on smaller screens */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Center logo and move cart to the right */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* .logo img{
+        width: 100px;
+        height: 20px;
+    } */
+
+    .bag {
+        margin-left: auto;
+        display: flex;
+        /* left: 10%; */
+        position: relative;
+        display: block;
+    }
+    .icon{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    main {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        max-width: 150px;
+        max-height: 20px;
+    }
+
+    .icon div img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .currency h3 {
+        font-size: 14px;
+    }
+    .bag {
+        margin-left: auto;
+        display: flex;
+        /* left: 10%; */
+        position: relative;
+        display: block;
+    }
+}
+
+/* Base styles */
+
+.breadcrumb {
+    font-size: 16px;
+    color: #000;
+    margin-left: 113px;
+    display: flex;
+    /* border: 1px solid; */
+    width: 310px;
+    justify-content: space-between;
+    gap: 5px;
+    
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+    /* border: 1px solid; */
+    
+
+}
+
+/* Media Queries for Responsiveness */
+/* @media (max-width: 768px) {
+    .breadcrumb {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+} */
+
+@media (max-width: 480px) {
+
+    .breadcrumb {
+        font-size: 12px;
+    }
+    .breadcrumb-container{
+        margin-left: -90px;
+    }
+
+}
+
+.checkout-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    color: #27231F;
+    margin-bottom: 50px;
+    font-weight: 500;
+    margin-left: 112px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-left: 112px;
+    gap: 50px;
+
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, .coupon input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 14px;
+    
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row input {
+    width: 48%;
+}
+.shipping-method{
+    width: 700px;
+    margin-left: 112px;
+}
+
+.shipping-options label, .payment-options label {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shipping-options input, .payment-options input {
+    margin-right: 10px;
+}
+
+.coupon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupon input {
+    width: 70%;
+}
+
+.apply-btn {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.order-summary ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.order-summary .total {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.payment-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-options label {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-options input {
+    margin-right: 15px;
+}
+
+/* Media Queries */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input {
+        width: 100%;
+    }
+
+    .coupon {
+        flex-direction: column;
+    }
+
+    .coupon input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .apply-btn, .payment-btn {
+        width: 100%;
+    }
+}

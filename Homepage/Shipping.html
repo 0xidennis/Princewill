@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping</title>
+    <link rel="stylesheet" href="./Shipping.css">
+     
+    <script src="./Shipping.js" defer></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- navbar -->
+    <section>
+        <main>
+            <div class="logo">
+                <img src="./image/PRINCEWILL (3) 3.png" alt="icon">
+            </div>
+            
+            <div class="nav-link">
+                <a href="">NEW ARRIVALS</a>
+                <a href="">MEN</a>
+                <a href="">WOMEN</a>
+                <a href="">GYM WEARS</a>
+                <a href="">GIFTS</a>
+            </div>
+            
+            <div class="hamburger">
+                <img src="./image/quill_hamburger.png" alt="menu">
+            </div>
+            <div class="icon">
+                <div class="search-icon" id="search-icon">
+                    <img src="./image/search-normal.png" alt="search" width="22px" height="22px">
+                </div>
+                <!-- <div class="search-container" id="search-container">
+                    <input type="text" class="search-bar" placeholder="Search here">
+                </div> -->
+                <div class="currency">
+                    <div class="currency-container" id="currency-container-1">
+                        <img src="./image/twemoji_flag-nigeria.png" alt="flag" width="20px" height="20px" class="flag" id="flag-1">
+                        <h3 class="currency-code" id="currency-code-1">NGN</h3>
+                        <img src="./image/arrow-down.png" alt="arrow-down" width="16px" height="16px" class="arrow-down" id="arrow-down-1">
+                        <!-- <div class="dropdown" id="dropdown-1">
+                            <div class="dropdown-item" data-currency="NGN" data-flag="./image/twemoji_flag-nigeria.png">NGN</div>
+                            <div class="dropdown-item" data-currency="USD" data-flag="./image/twemoji_flag-us-outlying-islands.png">US$</div>
+                        </div> -->
+                    </div>
+                
+                    <!-- <div class="currency-container" id="currency-container-2">
+                        <img src="./image/twemoji_flag-us-outlying-islands.png" alt="flag" width="20px" height="20px" class="flag" id="flag-2">
+                        <h3 class="currency-code" id="currency-code-2">US$</h3>
+                        <img src="./image/arrow-down.png" alt="arrow-down" width="16px" height="16px" class="arrow-down" id="arrow-down-2">
+                        <div class="dropdown" id="dropdown-2">
+                            <div class="dropdown-item" data-currency="NGN" data-flag="./image/twemoji_flag-nigeria.png">NGN</div>
+                            <div class="dropdown-item" data-currency="USD" data-flag="./image/twemoji_flag-us-outlying-islands.png">US$</div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                   <div class="heart">
+                   <img src="./image/hugeicons_favourite.png" alt="hugeicons_favourite" width="23px" height="23px">
+                   </div>
+                   <div class="cart">
+                    <img src="./image/shopping-cart.png" alt="">
+                   </div>
+                   <div class="user">
+                    <img src="./image/profile.png" alt="profile" width="25px" height="25px">
+                   </div>
+                   
+            </div>
+            <div class="bag">
+                <img src="./image/bag-2.png" alt="">
+               </div>
+        </main>
+    </section>
+    <!-- end of navbar -->
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <a href="#">Home</a> |
+            <a href="#">Men</a> |
+            <a href="#">Tshirts</a> |
+            <a href="#">ProductName</a> |
+            <a href="#">Carts</a> |
+            <a href="#">Shipping</a> 
+        </nav>
+        </div>
+    
+    <section class="contact-form">
+        <h2>Contact</h2>
+        <form>
+            <div class="form-row">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone No">
+        </form>
+    </section>
+
+    <!-- Shipping Address -->
+    <section class="shipping-address">
+        <h2>Shipping Address</h2>
+        <form>
+            <input type="text" placeholder="Address">
+            <div class="form-row">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="State">
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="Country">
+                <input type="text" placeholder="Postal Code">
+            </div>
+            <input type="text" placeholder="Nearest Bus/Stop (Optional)">
+            <textarea placeholder="Additional Information"></textarea>
+        </form>
+    </section>
+
+    <!-- Shipping Method -->
+    <section class="shipping-method">
+        <h2>Shipping Method</h2>
+        <div class="shipping-options">
+            <label><input type="radio" name="shipping"> FedEx <span>N0.00</span></label>
+            <label><input type="radio" name="shipping"> DHL <span>N0.00</span></label>
+            <label><input type="radio" name="shipping"> Company's Rider <span>N0.00</span></label>
+        </div>
+    </section>
+
+    <!-- Order Summary -->
+    <section class="order-summary">
+        <h2>Order Summary</h2>
+        <form>
+            <div class="coupon">
+                <input type="text" placeholder="Type Code">
+                <button class="apply-btn">Apply</button>
+            </div>
+            <ul>
+                <li>Items Subtotal: <span>N0.00</span></li>
+                <li>Shipping Fee: <span>N0.00</span></li>
+                <li>Tax: <span>N0.00</span></li>
+                <li>Discount: <span>N0.00</span></li>
+                <li class="total">Order Total: <span>N0.00</span></li>
+            </ul>
+            <button class="payment-btn">Proceed To Payment</button>
+        </form>
+    </section>
+
+    <!-- Payment Method -->
+    <section class="payment-method">
+        <h2>Payment Method</h2>
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment"> Pay with Card ****1234
+            </label>
+            <label>
+                <input type="radio" name="payment"> Transfer to Bank ****1234
+            </label>
+            <label>
+                <input type="radio" name="payment"> Crypto Payment Method
+            </label>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

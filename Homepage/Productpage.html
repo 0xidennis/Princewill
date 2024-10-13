@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productpage</title>
+    <script src="./Productpage.js" defer></script>
+    <link rel="stylesheet" href="./Productpage.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- navbar -->
+    <section>
+        <main>
+            <div class="logo">
+                <img src="./image/PRINCEWILL (3) 3.png" alt="icon">
+            </div>
+            
+            <div class="nav-link">
+                <a href="">NEW ARRIVALS</a>
+                <a href="">MEN</a>
+                <a href="">WOMEN</a>
+                <a href="">GYM WEARS</a>
+                <a href="">GIFTS</a>
+            </div>
+            
+            <div class="hamburger">
+                <img src="./image/quill_hamburger.png" alt="menu">
+            </div>
+            <div class="icon">
+                <div class="search-icon" id="search-icon">
+                    <img src="./image/search-normal.png" alt="search" width="22px" height="22px">
+                </div>
+                <!-- <div class="search-container" id="search-container">
+                    <input type="text" class="search-bar" placeholder="Search here">
+                </div> -->
+                <div class="currency">
+                    <div class="currency-container" id="currency-container-1">
+                        <img src="./image/twemoji_flag-nigeria.png" alt="flag" width="20px" height="20px" class="flag" id="flag-1">
+                        <h3 class="currency-code" id="currency-code-1">NGN</h3>
+                        <img src="./image/arrow-down.png" alt="arrow-down" width="16px" height="16px" class="arrow-down" id="arrow-down-1">
+                        <!-- <div class="dropdown" id="dropdown-1">
+                            <div class="dropdown-item" data-currency="NGN" data-flag="./image/twemoji_flag-nigeria.png">NGN</div>
+                            <div class="dropdown-item" data-currency="USD" data-flag="./image/twemoji_flag-us-outlying-islands.png">US$</div>
+                        </div> -->
+                    </div>
+                
+                    <!-- <div class="currency-container" id="currency-container-2">
+                        <img src="./image/twemoji_flag-us-outlying-islands.png" alt="flag" width="20px" height="20px" class="flag" id="flag-2">
+                        <h3 class="currency-code" id="currency-code-2">US$</h3>
+                        <img src="./image/arrow-down.png" alt="arrow-down" width="16px" height="16px" class="arrow-down" id="arrow-down-2">
+                        <div class="dropdown" id="dropdown-2">
+                            <div class="dropdown-item" data-currency="NGN" data-flag="./image/twemoji_flag-nigeria.png">NGN</div>
+                            <div class="dropdown-item" data-currency="USD" data-flag="./image/twemoji_flag-us-outlying-islands.png">US$</div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                   <div class="heart">
+                   <img src="./image/hugeicons_favourite.png" alt="hugeicons_favourite" width="23px" height="23px">
+                   </div>
+                   <div class="cart">
+                    <img src="./image/shopping-cart.png" alt="">
+                   </div>
+                   <div class="user">
+                    <img src="./image/profile.png" alt="profile" width="25px" height="25px">
+                   </div>
+                   
+            </div>
+            <div class="bag">
+                <img src="./image/bag-2.png" alt="">
+               </div>
+        </main>
+    </section>
+    <!-- end of navbar -->
+
+    <!-- Product Page Container -->
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb">
+            <a href="#">Home</a> |
+            <a href="#">Men</a> |
+            <a href="#">Tshirts</a> |
+            <a href="#">Product Name</a> 
+        </nav>
+        </div>
+    <div class="product-page">
+
+        <!-- Left Section: Product Image and Thumbnails -->
+        <div class="product-images">
+            <div class="main-image">
+                <img src="./image/IMG_0043 1.png" alt="Product Image" width="650px">
+            </div>
+           
+        </div>
+        <div class="thumbnails">
+            <img src="./image/IMG_0046 1.png" alt="Thumbnail 1" width="40px" height="100px">
+            <img src="./image/IMG_0045 1.png" alt="Thumbnail 2" width="40px" height="100px">
+            <img src="./image/IMG_0047 1 (1).png" alt="Thumbnail 3" width="40px" height="100px">
+        </div>
+
+        <!-- Right Section: Product Information -->
+        <div class="product-info">
+            <p class="sold-out">Sold Out</p>
+            <h1>Product Name</h1>
+            <p class="price">₦0.00</p>
+
+            <div class="color-options">
+                <p>Color:</p>
+               <p>Black
+                <span class="color-circle black"></span>
+                <span class="color-circle white"></span>
+                <span class="color-circle green"></span>
+                <span class="color-circle blue"></span>
+                <span class="color-circle red"></span>
+               </p>
+            </div>
+
+            <div class="size-options">
+                <label for="size-select">Size:</label> <br>
+                <select id="size-select">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+
+            <div class="quantity-options">
+                <label for="quantity-select">Quantity:</label> <br>
+                <select id="quantity-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <button class="add-to-bag">Add To Bag <img src="./image/bag-2.png" alt=""></button>
+            <button class="buy-now">Buy Now</button>
+
+            <!-- Collapsible Sections -->
+            <div class="collapsible-section">
+                <button class="collapsible">Product Details</button>
+                <div class="content">
+                    <p>Details about the product...</p>
+                </div>
+
+                <button class="collapsible">Shipping And Returns</button>
+                <div class="content">
+                    <p>Shipping and return information...</p>
+                </div>
+
+                <button class="collapsible">Size Guide</button>
+                <div class="content">
+                    <p>Size guide information...</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-heart">
+            <img src="./image/Nav.png" alt="">
+        </div>
+    </div>
+
+    <!-- Recently Viewed Section -->
+    <div class="recently-viewed">
+        <h2>You may also like  <span>| Recently Viewed</span></h2>
+        <div class="recent-items">
+            <div class="item">
+                <img src="./image/IMG_0046 1.png" alt="Recently Viewed 1" width="350px" height="500px">
+            </div>
+            <div class="item">
+                <img src="./image/IMG_0042 (1) 1.png" alt="Recently View" width="350px" height="500px">
+            </div>
+            <div class="item">
+                <img src="./image/IMG_0047 1 (1).png" alt="Recently Viewed 3" width="350px" height="500px">
+            </div>
+            <div class="item">
+                <img src="./image/IMG_0046 1.png" alt="Recently Viewed 3" width="350px" height="500px">
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
