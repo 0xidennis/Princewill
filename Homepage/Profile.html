@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipping</title>
-    <link rel="stylesheet" href="./Shipping.css">
-     
-    <script src="./Shipping.js" defer></script>
+    <title>Profile</title>
+    <link rel="stylesheet" href="./Profile.css">
+    <script src="./Profile.js" defer></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    
     <!-- navbar -->
     <section>
         <main>
@@ -82,89 +82,45 @@
     <div class="breadcrumb-container">
         <nav class="breadcrumb">
             <a href="#">Home</a> |
-            <a href="#">Men</a> |
-            <a href="#">Tshirts</a> |
-            <a href="#">ProductName</a> |
-            <a href="#">Carts</a> |
-            <a href="#">Shipping</a> 
+            <a href="#">Profile</a> 
+            
         </nav>
         </div>
-    
-    <section class="contact-form">
-        <h2>Contact</h2>
-        <form>
-            <div class="form-row">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-            </div>
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Phone No">
-        </form>
-    </section>
 
-    <!-- Shipping Address -->
-    <section class="shipping-address">
-        <h2>Shipping Address</h2>
-        <form>
-            <input type="text" placeholder="Address">
-            <div class="form-row">
-                <input type="text" placeholder="City">
-                <input type="text" placeholder="State">
-            </div>
-            <div class="form-row">
-                <input type="text" placeholder="Country">
-                <input type="text" placeholder="Postal Code">
-            </div>
-            <input type="text" placeholder="Nearest Bus/Stop (Optional)">
-            <textarea placeholder="Additional Information"></textarea>
-        </form>
-    </section>
-
-    <!-- Shipping Method -->
-    <section class="shipping-method">
-        <h2>Shipping Method</h2>
-        <div class="shipping-options">
-            <label><input type="radio" name="shipping"> FedEx <span>N0.00</span></label>
-            <label><input type="radio" name="shipping"> DHL <span>N0.00</span></label>
-            <label><input type="radio" name="shipping"> Company's Rider <span>N0.00</span></label>
-        </div>
-    </section>
-
-    <!-- Order Summary -->
-    <section class="order-summary">
-        <h2>Order Summary</h2>
-        <form>
-            <div class="coupon">
-                <input type="text" placeholder="Type Code">
-                <button class="apply-btn">Apply</button>
-            </div>
+        <!-- cards begins -->
+        <nav>
             <ul>
-                <li>Items Subtotal: <span>N0.00</span></li>
-                <li>Shipping Fee: <span>N0.00</span></li>
-                <li>Tax: <span>N0.00</span></li>
-                <li>Discount: <span>N0.00</span></li>
-                <li class="total">Order Total: <span>N0.00</span></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
             </ul>
-            <button class="payment-btn">Proceed To Payment</button>
-        </form>
-    </section>
-
-    <!-- Payment Method -->
-    <section class="payment-method">
-        <h2>Payment Method</h2>
-        <div class="payment-options">
-            <label>
-                <input type="radio" name="payment"> Pay with Card ****1234
-            </label>
-            <label>
-                <input type="radio" name="payment"> Transfer to Bank ****1234
-            </label>
-            <label>
-                <input type="radio" name="payment"> Crypto Payment Method
-            </label>
-        </div>
-    </section>
-
-</div>
+        </nav>
+        
+        <main>
+            <section class="profile-header">
+                <h1>Hello Ola!</h1>
+                <p>Welcome to your profile</p>
+            </section>
+            
+            <section class="profile-sections">
+                <div class="profile-card-1">
+                    <h2>Account</h2>
+                    <p>View | Edit your Personal information</p>
+                    <button class="profile-btn">></button>
+                </div>
+    
+                <div class="profile-card-2">
+                    <h2>Order</h2>
+                    <p>Track order | View order history</p>
+                    <button class="profile-btn">></button>
+                </div>
+    
+                <div class="profile-card-3">
+                    <h2>Shipping | Payment</h2>
+                    <p>View | Edit your shipping address and payment method</p>
+                    <button class="profile-btn">></button>
+                </div>
+            </section>
+        </main>
+    
 </body>
 </html>

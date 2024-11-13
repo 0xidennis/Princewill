@@ -1,0 +1,95 @@
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffff;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+    
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+  }
+  
+  input::placeholder, select {
+    color: #999;
+  }
+  
+  .phone-container {
+    display: flex;
+  }
+  
+  #country-code {
+    width: 25%;
+    margin-right: 5px;
+  }
+  
+  #phone {
+    width: 75%;
+  }
+  
+  button {
+    background-color: #B71C1C;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #8b0000;
+  }
+  
+  .terms {
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .terms a {
+    color: #FF6F61;
+    text-decoration: none;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .login-link a {
+    color: #FF6F61;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }

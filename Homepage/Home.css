@@ -29,6 +29,7 @@ main {
 .logo img {
     max-width: 237px;
     height: 32px;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -46,6 +47,20 @@ main {
     font-weight: 600;
     font-size: 16px;
     
+}
+.user-navigation ul{
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 2%;
+    left: 55%;
+    background-color: white;
+    width: 45%;
+    height: 20%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    z-index: 10;
 }
 
 /* .nav-link a:hover
@@ -80,7 +95,7 @@ main {
     width: 25px;
     height: 25px;
 }
-.bag{
+.bag img{
     display: none;
     margin-left: auto;
 }
@@ -97,18 +112,82 @@ main {
     z-index: 1;
 }
 
-/* Dropdown container styling */
-.dropdown-container {
+  
+  .dropdown-btn {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    z-index: 10;
+  }
+  
+  .dropdown-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .dropdown-list a{
+    margin-top: -18px;
+    margin-right: -70px;
+  }
+  
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .dropdown-but {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  /* When dropdown is active */
+  .dropdown.active {
     display: flex;
     flex-direction: column;
-}
-
-.dropdown-header {
-    display: flex;
-    justify-content: space-between;
+  }
+  
+  /* Flexbox for dropdown lists */
+  .dropdown-list ul {
+    flex: 1;
+    min-width: 150px;
     cursor: pointer;
-}
-
+  }
+  
+  /* Toggle Men and Women dropdown visibility */
+  #new-arrivals .dropdown-but[data-target="men"] + ul,
+  #new-arrivals .dropdown-but[data-target="women"] + ul {
+    display: none;
+  }
+  
+  #new-arrivals .dropdown-list.active-men .dropdown-but[data-target="women"] + ul {
+    display: none;
+  }
+  
+  #new-arrivals .dropdown-list.active-women .dropdown-but[data-target="men"] + ul {
+    display: none;
+  }
+  
+  #new-arrivals .dropdown-list.active-men .dropdown-but[data-target="men"] + ul {
+    display: block;
+  }
+  
+  #new-arrivals .dropdown-list.active-women .dropdown-but[data-target="women"] + ul {
+    display: block;
+  }
+  
 .header {
     font-size: 1.5em;
     margin: 10px;
@@ -207,16 +286,110 @@ main {
     margin-left: 5px;
 }
 
-/* .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Heart icon styling */
+  .heart {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Favorite List Container */
+  .favorite-list-container {
+    position: fixed;
+    top: 10%;
+    right: 10px;
+    width: 300px;
     background-color: white;
-    border: 1px solid #ddd;
-    width: 100%;
-    z-index: 1;
-} */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none; 
+    z-index: 1000;
+  }
+  
+  .favorite-header {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .favorite-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .close-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Favorite List */
+  .favorite-list {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .favorite-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .favorite-item:last-child {
+    border-bottom: none;
+  }
+  
+  .product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .buy-option {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Scrollable container */
+  .favorite-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  /* Show favorite list when active */
+  .favorite-list-container.active {
+    display: block;
+  }
+  .cart{
+    cursor: pointer;
+  }
+  
+
+
 
 .dropdown-item {
     padding: 8px 10px;
@@ -266,8 +439,8 @@ main {
 
     .bag {
         margin-left: auto;
-        display: flex;
-        /* left: 10%; */
+        display: block;
+        left: 10%;
         position: relative;
     }
     .icon{
@@ -314,7 +487,7 @@ main {
     align-items: center; */
     background-size: cover;
     background-position: center;
-    animation: backgroundFade 5s infinite ease-in-out; /* Background animation */
+    animation: backgroundFade 7s infinite ease-in-out; /* Background animation */
 }
 
 
@@ -324,7 +497,7 @@ main {
     color: #100E0C;
     line-height: 1.5;
     margin-top: 280px;
-    margin-left: 120px;
+    margin-left: 12%;
 }
 
 .hero-button button {
@@ -336,20 +509,19 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 123px;
+    margin-left: 12%;
 
 }
 
 .hero-button button:hover {
     background-color: white;
+    color:#d61f29 ;
 }
 
 .hero-circle {
     display: flex;
-    /* justify-content: center; */
     margin-top: 220px;
-    /* border: 1px solid; */
-    margin-left: 100px;
+    margin-left: 12%;
 }
 
 .hero-circle div {
@@ -358,7 +530,7 @@ main {
     background-color: #fff;
     border-radius: 50%;
     margin: 0 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 5s  ease-in-out;
 }
 
 .hero-circle .active {
@@ -467,8 +639,9 @@ main {
     padding: 20px;
     position: relative;
     margin-top: 50px;
-    margin-left: -60px;
+    left: 4%;
     /* border: 1px solid; */
+    width: 90%;
 }
 
 .cards-text {
@@ -544,6 +717,7 @@ main {
         flex-direction: row;
         gap: 10px;
         overflow-x: scroll; /* Enable scrolling on smaller screens */
+        display: grid;
     }
 
     .cards-text {
@@ -591,10 +765,10 @@ main {
     background-repeat: none;
     position: relative;
     background-size: cover;
-    height: 650px;
-    width: 1500px;
-    margin-left: 100px;
-    padding-left: 100px;
+    height: 70vh;
+    width: 81%;
+    left: 10%;
+    padding-left: 5%;
     border:1px solid #f7e9ea;
     background-color: #f7e9ea;
     /* margin-top: 100px; */
@@ -624,6 +798,12 @@ height: 200px;
     margin-top: 20px;
     font-size: 16px;
     font-family: Poppins;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.wignet div button:hover{
+    background-color: white;
+    color:#8C0000 ;
 }
 /* wignet ends */
 
@@ -640,7 +820,7 @@ height: 200px;
     background-color:#f7e9ea ;
     width: 1500px;
     height: 550px;
-    margin-left: 90px;
+    left: 10%;
     margin-top: 30px;
 }
 .wignet-2-cards{

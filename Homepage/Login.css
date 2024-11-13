@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins;
+}
+
+section {
+  width: 100%;
+  background-color: #fff; /* Customize background as needed */
+  padding: 30px 0;
+  
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+
+}
+
+.logo img {
+  max-width: 237px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.nav-link {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  /* border: 1px solid; */
+  padding-left: -600px;
+  
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  
+}
+.user-navigation ul{
+  text-decoration: none;
+  display: none;
+  position: absolute;
+  list-style: none;
+  top: 2%;
+  left: 55%;
+  background-color: white;
+  width: 45%;
+  height: 20%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+/* .nav-link a:hover
+.nav-link a:focus
+.nav-link a:active {
+  border-bottom: 2px solid grey;
+} */
+
+/* Icons Section */
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon div {
+  display: flex;
+  align-items: center;
+}
+
+.currency h3 {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+  display: none;
+}
+
+.hamburger img {
+  width: 25px;
+  height: 25px;
+}
+.bag img{
+  display: none;
+  margin-left: auto;
+}
+/* dropdown starts */
+
+/* General dropdown styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px;
+  z-index: 1;
+}
+
+
+.dropdown-btn {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.dropdown-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.dropdown-list a{
+  margin-top: -18px;
+  margin-right: -70px;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.dropdown-but {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* When dropdown is active */
+.dropdown.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flexbox for dropdown lists */
+.dropdown-list ul {
+  flex: 1;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+/* Toggle Men and Women dropdown visibility */
+#new-arrivals .dropdown-but[data-target="men"] + ul,
+#new-arrivals .dropdown-but[data-target="women"] + ul {
+  display: none;
+}
+
+#new-arrivals .dropdown-list.active-men .dropdown-but[data-target="women"] + ul {
+  display: none;
+}
+
+#new-arrivals .dropdown-list.active-women .dropdown-but[data-target="men"] + ul {
+  display: none;
+}
+
+#new-arrivals .dropdown-list.active-men .dropdown-but[data-target="men"] + ul {
+  display: block;
+}
+
+#new-arrivals .dropdown-list.active-women .dropdown-but[data-target="women"] + ul {
+  display: block;
+}
+
+.header {
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: #ddd;
+}
+
+.dropdown-section {
+  display: none;
+  padding: 12px;
+}
+
+/* Display the active dropdown section */
+.active {
+  display: block;
+}
+
+/* Dropdown visible */
+.show {
+  display: block;
+}
+
+/* search icon */
+.search-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.search-container {
+  display: none; /* Initially hidden */
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 300px;
+  max-width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-container.active {
+  display: block; /* Show the search bar */
+  width: 100%; /* Cover the logo and navlinks */
+}
+
+.search-bar::placeholder {
+  color: #bbb;
+}
+
+.search-bar:focus {
+  border-color: #aaa;
+}
+
+/* currency */
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.currency-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.flag {
+  margin-right: 5px;
+}
+
+.arrow-down {
+  margin-left: 5px;
+}
+
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Heart icon styling */
+.heart {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Favorite List Container */
+.favorite-list-container {
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none; 
+  z-index: 1000;
+}
+
+.favorite-header {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.favorite-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Favorite List */
+.favorite-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buy-option {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Scrollable container */
+.favorite-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Show favorite list when active */
+.favorite-list-container.active {
+  display: block;
+}
+.cart{
+  cursor: pointer;
+}
+
+
+
+
+.dropdown-item {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* To show the dropdown when the parent is active */
+.currency-container.active .dropdown {
+  display: block;
+}
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  main {
+      justify-content: space-between;
+  }
+
+  /* Hide navigation links on smaller screens */
+  .nav-link {
+      display: none;
+  }
+
+  /* Show the hamburger menu on smaller screens */
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  /* Center logo and move cart to the right */
+  .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  /* .logo img{
+      width: 100px;
+      height: 20px;
+  } */
+
+  .bag {
+      margin-left: auto;
+      display: block;
+      left: 10%;
+      position: relative;
+  }
+  .icon{
+      display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  main {
+      padding: 0 10px;
+  }
+
+  .logo img {
+      max-width: 150px;
+      max-height: 20px;
+  }
+
+  .icon div img {
+      width: 20px;
+      height: 20px;
+  }
+
+  .currency h3 {
+      font-size: 14px;
+  }
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin-left: 35%;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .forgot-password {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    background-color: #b31a17;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #a31312;
+  }
+  
+  .create-account {
+    background-color: transparent;
+    color: #b31a17;
+    border: 1px solid #b31a17;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-account:hover {
+    background-color: #b31a17;
+    color: white;
+  }
